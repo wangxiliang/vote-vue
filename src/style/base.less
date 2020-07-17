@@ -1,0 +1,33 @@
+html, body, .app, .layout{
+  height: 100%;
+  background: #f7f8fa;
+}
+
+.container {
+  padding: 10px;
+}
+
+
+
+// 主题色
+@theme-color: #1989fa;
+@sub-color: #666;
+
+
+@keyframes infinite_circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.transition_circle {
+  animation: infinite_circle 1s linear infinite;
+}

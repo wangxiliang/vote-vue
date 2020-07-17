@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" 
+	content="viewport-fit=cover,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="renderer" content="webkit">
+	<script>var require = { urlArgs: 'v=20161011' };</script>
+	<script type="text/javascript" src="{$_W['siteroot']}/web/resource/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}/web/resource/js/app/util.js?v=20161011"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}/web/resource/js/app/common.min.js?v=20161011"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}/web/resource/js/require.js?v=20161011"></script>
+	<script type="text/javascript" src="{$_W['siteroot']}/web/resource/js/app/config.js?v=20161011"></script>
+</head>
+<body>
+	<script>
+		window.sysinfo = {
+			{if !empty($_W['fans'])}'follow': '{$_W['fans']['follow']}',{/if}
+			{if !empty($_W['uniacid'])}'uniacid': '{$_W['uniacid']}',{/if}
+			{if !empty($_W['acid'])}'acid': '{$_W['acid']}',{/if}{if !empty($_W['openid'])}'openid': '{$_W['openid']}',{/if}
+			{if !empty($_W['uid'])}'uid': '{$_W['uid']}',{/if}
+			'siteroot': '{$_W['siteroot']}',
+					'siteurl': '{$_W['siteurl']}',
+					'attachurl': '{$_W['attachurl']}',
+					'attachurl_local': '{$_W['attachurl_local']}',
+					'attachurl_remote': '{$_W['attachurl_remote']}',
+					{if defined('MODULE_URL')}'MODULE_URL': '{MODULE_URL}',{/if}
+			'cookie' : {'pre': '{$_W['config']['cookie']['pre']}'}
+			};console.log(window.sysinfo);
+	</script>
+
+	<div id="app"></div>
+	
+	
+</body>
+</html>
